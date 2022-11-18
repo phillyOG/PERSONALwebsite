@@ -10,4 +10,18 @@
     <Folder Include="Views\Contact\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="FluentEmail.Mailgun" />
+    <None Remove="Microsoft.AspNetCore.Identity" />
+    <None Remove="FluentEmail.MailKit" />
+    <None Remove="FluentEmail.Razor" />
+    <None Remove="FluentEmail.Smtp" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FluentEmail.Mailgun" Version="3.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="FluentEmail.MailKit" Version="3.0.2" />
+    <PackageReference Include="FluentEmail.Razor" Version="3.0.2" />
+    <PackageReference Include="FluentEmail.Smtp" Version="3.0.2" />
+  </ItemGroup>
 </Project>

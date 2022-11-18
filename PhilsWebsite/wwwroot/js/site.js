@@ -1,4 +1,4 @@
-﻿
+﻿const text = document.querySelector
 
 // Write your JavaScript code.
  /*Get the modal*/

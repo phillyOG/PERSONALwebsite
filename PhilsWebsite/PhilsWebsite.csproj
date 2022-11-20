@@ -8,6 +8,10 @@
 
   <ItemGroup>
     <Folder Include="Views\Contact\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +20,10 @@
     <None Remove="FluentEmail.MailKit" />
     <None Remove="FluentEmail.Razor" />
     <None Remove="FluentEmail.Smtp" />
+    <None Remove="ViewModels\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Helpers\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FluentEmail.Mailgun" Version="3.0.2" />

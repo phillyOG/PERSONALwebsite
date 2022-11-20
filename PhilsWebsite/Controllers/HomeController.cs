@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PhilsWebsite.Interfaces;
 using PhilsWebsite.Models;
+using PhilsWebsite.ViewModels;
 using System.Diagnostics;
 
 namespace PhilsWebsite.Controllers
@@ -7,11 +9,22 @@ namespace PhilsWebsite.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IMailgunSenderEmail _mailgunSenderEmail;
 
-        public HomeController(ILogger<HomeController> logger)
+      
+        public HomeController(ILogger<HomeController> logger, IMailgunSenderEmail mailSenderEmail)
         {
             _logger = logger;
+            _mailgunSenderEmail = mailSenderEmail;
         }
+
+        [HttpGet]
+        public IActionResult Contact()
+        {
+            ContactViewModel contactViewModel = new ContactViewModel();
+            return View(contactViewModel);
+        }
+
 
         public IActionResult Index()
         {
@@ -21,17 +34,32 @@ namespace PhilsWebsite.Controllers
         {
             return View();
         }
+    
+
+        //make sure its state is valid
+        [HttpPost]
+        public async Task<IActionResult> Contact(ContactViewModel contactViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                await _mailgunSenderEmail.SendEmailAsync(contactViewModel.Name, contactViewModel.Email, contactViewModel.Message);
+                //redirect to contact
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(contactViewModel);
+            }
+        }
+
+
 
         public IActionResult About()
         {
             return View();
         }
 
-        public IActionResult Contact()
-        {
-            return View();
-        }
-
+     
         public IActionResult Privacy()
         {
             return View();

@@ -75,9 +75,11 @@ IMG {
     transition:0.8s;
     position:relative;
     overflow:hidden;
+    padding-block:10px 20px;
 
 }
 .btn, .btn2 {
+    padding-block: 10px 20px;
     color: #3498db;
 }
 .btn3, .btn4 {
@@ -116,10 +118,12 @@ IMG {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-block: 100px 200px;
 }
 /* Modal Content/Box */
 .modal-content {
-    background-color: black;
+    padding-block: 10px 20px;
+    background-color: white;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
@@ -150,6 +154,7 @@ IMG {
     transition: 0.8s;
     position: relative;
     overflow: hidden;
+    padding-block: 10px 20px;
 }
 /* The Modal (background) */
 .modal1 {
@@ -163,10 +168,12 @@ IMG {
     overflow: auto; /* Enable scroll if needed */
     background: rgb(0,0,0); /* Fallback color */
     background: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-block: 10px 20px;
 }
 
 /* Modal Content/Box */
 .modal-content1 {
+    padding-block: 10px 20px;
     background: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
@@ -175,16 +182,26 @@ IMG {
 }
 
 /* The Close Button */
-.close {
+.close1 {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-    .close:hover,
-    .close:focus {
+    .close1:hover,
+    .close1:focus {
         color: black;
         text-decoration: none;
         cursor: pointer;
-    } 
+    }
+
+.Projects {
+
+    margin-top:50px;
+    margin-bottom:100px;
+}
+.repo {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}

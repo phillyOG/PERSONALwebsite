@@ -52,7 +52,38 @@ span1.onclick = function () {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-    if (event.target == modal) {
+    if (event.target == modal1) {
         modal1.style.display = "none";
+    }
+} 
+///
+//SQL
+///
+
+
+
+// Get the modal
+var myModal2 = document.getElementById("myModal2");
+
+// Get the button that opens the modal
+var myBtn2 = document.getElementById("myBtn2");
+
+// Get the <span> element that closes the modal
+var span2 = document1.getElementsByClassName("close1")[0];
+
+// When the user clicks on the button, open the modal
+myBtn2.onclick = function () {
+    myModal2.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function () {
+    myModal2.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function () {
+    if (event.target == myModal2) {
+        myModal2.style.display = "none";
     }
 } 
